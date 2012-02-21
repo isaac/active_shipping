@@ -78,7 +78,7 @@ module ActiveMerchant
         protected
 
         def self.new_zealand?(location)
-          [ 'NZ', nil ].include?(location.country_code)
+          [ 'NZ', nil ].include?(Location.from(location).country_code)
         end
 
         def self.domestic?(locations)
